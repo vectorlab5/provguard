@@ -1,0 +1,14 @@
+\begin{table}[H]
+\caption{Ablation over manifest content. The minimal manifest stores only query, evidence, and output hashes; the full manifest additionally records retriever, generator, NLI, prompt, and decoding metadata sufficient to re-execute the query offline. \textit{Config repro} is the fraction of manifests for which the recorded fields fully reconstruct the inference configuration; \textit{Claim audit} is the fraction of claims that can be independently re-verified against archived evidence.}
+\label{tab:manifest_abl}
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X *{4}{>{\centering\arraybackslash}c}@{}}
+\toprule
+\thead{Manifest Variant} & \thead{Audit\\Verif.} & \thead{Config\\Repro.} & \thead{Claim\\Audit} & \thead{Size\\(KB)}\\
+\midrule
+Minimal hash-only & 1.000 & 0.21 & 0.00 & 0.42\\
+ProvGuard-RAG (full) & 1.000 & 0.97 & 1.00 & 1.82\\
+\bottomrule
+\end{tabularx}
+\end{table}

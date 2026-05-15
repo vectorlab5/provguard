@@ -1,0 +1,19 @@
+\begin{table}[H]
+\caption{Primary results across the four pipeline configurations on the 500-query incident-intelligence benchmark. Each row is a metric; arrows give the desired direction. Best per row in \textbf{bold}, second-best \underline{underlined}; $\dagger$ marks $p<0.05$ vs.\ B1 by Friedman test with Nemenyi post-hoc. Values are mean $\pm$ 95\% paired bootstrap CI over the 500 query-level observations within each seed, averaged across five seeds.}
+\label{tab:main_results}
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X *{4}{>{\centering\arraybackslash}c}@{}}
+\toprule
+\thead{Metric} & \thead{Vanilla\\RAG} & \thead{RAG +\\Prov.\ Filter} & \thead{RAG +\\NLI Verif.} & \thead{\textbf{ProvGuard-}\\\textbf{RAG (Ours)}}\\
+\midrule
+Incident classification accuracy ($\uparrow$) & 0.758 $\pm$ 0.005 & 0.757 $\pm$ 0.005 & \underline{0.776 $\pm$ 0.005} & \textbf{0.777 $\pm$ 0.005}$^\dagger$\\
+Evidence-grounded claim recall ($\uparrow$) & 0.738 $\pm$ 0.004 & 0.760 $\pm$ 0.005 & \underline{0.859 $\pm$ 0.003} & \textbf{0.882 $\pm$ 0.004}$^\dagger$\\
+Claim support ratio ($\uparrow$) & 0.721 $\pm$ 0.008 & 0.720 $\pm$ 0.008 & \underline{0.886 $\pm$ 0.005} & \textbf{0.887 $\pm$ 0.005}$^\dagger$\\
+Supported answer coverage ($\uparrow$) & \underline{0.907 $\pm$ 0.003} & \textbf{0.921 $\pm$ 0.003} & 0.832 $\pm$ 0.004 & 0.857 $\pm$ 0.003\\
+Over-abstention rate ($\downarrow$) & \textbf{0.022 $\pm$ 0.001} & \underline{0.029 $\pm$ 0.001} & 0.071 $\pm$ 0.002 & 0.052 $\pm$ 0.001\\
+Abstention precision ($\uparrow$) & 0.413 $\pm$ 0.008 & 0.417 $\pm$ 0.009 & \underline{0.830 $\pm$ 0.003} & \textbf{0.860 $\pm$ 0.003}$^\dagger$\\
+Manifest audit verifiability ($\uparrow$) & N/A & N/A & N/A & \textbf{1.000}$^\dagger$\\
+\bottomrule
+\end{tabularx}
+\end{table}

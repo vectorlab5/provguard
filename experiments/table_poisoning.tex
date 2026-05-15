@@ -1,0 +1,18 @@
+\begin{table}[H]
+\caption{Poisoned-evidence robustness under three corpus poison levels. Lower is better in every cell; $\dagger$: $p<0.05$ vs.\ B1 at the same poison level by McNemar test.}
+\label{tab:poisoning}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.4cm} *{6}{>{\centering\arraybackslash}X}@{}}
+\toprule
+& \multicolumn{2}{c}{\textbf{1\% poison}} & \multicolumn{2}{c}{\textbf{5\% poison}} & \multicolumn{2}{c}{\textbf{10\% poison}}\\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+\thead{Config.} & \thead{Chunk\\Rate} & \thead{Claim\\Sup.} & \thead{Chunk\\Rate} & \thead{Claim\\Sup.} & \thead{Chunk\\Rate} & \thead{Claim\\Sup.}\\
+\midrule
+Vanilla RAG & 0.009 $\pm$ 0.000 & 0.006 $\pm$ 0.000 & 0.042 $\pm$ 0.001 & 0.031 $\pm$ 0.001 & 0.085 $\pm$ 0.002 & 0.062 $\pm$ 0.001\\
+RAG + Prov.\ Filter & 0.004 $\pm$ 0.000 & 0.003 $\pm$ 0.000 & 0.020 $\pm$ 0.000 & 0.014 $\pm$ 0.000 & 0.040 $\pm$ 0.001 & 0.028 $\pm$ 0.001\\
+RAG + NLI Verif. & 0.008 $\pm$ 0.000 & 0.002 $\pm$ 0.000 & 0.040 $\pm$ 0.001 & 0.008 $\pm$ 0.000 & 0.079 $\pm$ 0.002 & 0.016 $\pm$ 0.000\\
+ProvGuard-RAG (Full) & \textbf{0.002 $\pm$ 0.000}$^\dagger$ & \textbf{0.000 $\pm$ 0.000}$^\dagger$ & \textbf{0.010 $\pm$ 0.000}$^\dagger$ & \textbf{0.001 $\pm$ 0.000}$^\dagger$ & \textbf{0.020 $\pm$ 0.000}$^\dagger$ & \textbf{0.002 $\pm$ 0.000}$^\dagger$\\
+\bottomrule
+\end{tabularx}
+\end{table}

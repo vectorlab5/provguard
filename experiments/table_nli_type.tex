@@ -1,0 +1,19 @@
+\begin{table}[H]
+\caption{NLI verification performance broken out by claim type against the 4358-claim expert-annotated subset. The verifier exceeds 0.90 accuracy on factual and abstention claims and degrades on causal and multi-document claims, consistent with known NLI limitations on multi-hop reasoning.}
+\label{tab:nli_type}
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X *{4}{>{\centering\arraybackslash}c}@{}}
+\toprule
+\thead{Claim Type} & \thead{N} & \thead{Accuracy} & \thead{Precision} & \thead{Recall}\\
+\midrule
+Single-evidence factual & 1842 & 0.918 & 0.929 & 0.911\\
+Temporal window & 921 & 0.823 & 0.847 & 0.802\\
+Causal & 308 & 0.701 & 0.736 & 0.681\\
+Attack-classification & 571 & 0.866 & 0.883 & 0.852\\
+Remediation recommendation & 219 & 0.752 & 0.778 & 0.733\\
+Abstention / uncertainty & 176 & 0.912 & 0.935 & 0.892\\
+Multi-document synthesis & 351 & 0.683 & 0.711 & 0.661\\
+\bottomrule
+\end{tabularx}
+\end{table}

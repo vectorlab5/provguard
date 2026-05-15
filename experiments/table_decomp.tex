@@ -1,0 +1,14 @@
+\begin{table}[H]
+\caption{Quality of two claim-decomposition strategies against human-annotated claim segmentation on a held-out 200-answer subset. Higher is better.}
+\label{tab:decomp}
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X *{3}{>{\centering\arraybackslash}c}@{}}
+\toprule
+\thead{Decomposer} & \thead{Precision} & \thead{Recall} & \thead{Segmentation\\F1}\\
+\midrule
+Few-shot Qwen2.5-7B-Instruct & 0.873 $\pm$ 0.012 & 0.852 $\pm$ 0.014 & 0.862 $\pm$ 0.011\\
+Fine-tuned T5-base (claim-segmentation head) & 0.906 $\pm$ 0.010 & 0.881 $\pm$ 0.012 & 0.893 $\pm$ 0.009\\
+\bottomrule
+\end{tabularx}
+\end{table}

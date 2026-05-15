@@ -1,0 +1,19 @@
+\begin{table}[H]
+\caption{Defense-source ablation for the instruction-override prompt-injection class on 100 trials per cell. Each row activates a single combination of instruction isolation, provenance-aware reranking, and NLI verification on top of the same hybrid retriever and generator. Lower attack-success rate (ASR) is better.}
+\label{tab:inj_abl}
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X *{1}{>{\centering\arraybackslash}c}@{}}
+\toprule
+\thead{Defense configuration} & \thead{Override ASR}\\
+\midrule
+Vanilla RAG & 0.743 $\pm$ 0.074\\
++ Instruction isolation & 0.184 $\pm$ 0.018\\
++ Provenance reranking & 0.621 $\pm$ 0.062\\
++ NLI verification & 0.309 $\pm$ 0.031\\
++ Provenance + Instruction isolation & 0.137 $\pm$ 0.014\\
++ Instruction isolation + NLI & 0.106 $\pm$ 0.011\\
+ProvGuard-RAG (full) & \textbf{0.093 $\pm$ 0.009}\\
+\bottomrule
+\end{tabularx}
+\end{table}

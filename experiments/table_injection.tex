@@ -1,0 +1,16 @@
+\begin{table}[H]
+\caption{Prompt-injection attack-success rate (ASR) across four attack types and four configurations on 100 injection trials per cell. Lower is better; the StruQ defense baseline is included as a stronger comparison than vanilla RAG.}
+\label{tab:injection}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X *{4}{>{\centering\arraybackslash}c}@{}}
+\toprule
+\thead{Attack Type} & \thead{Vanilla\\RAG} & \thead{RAG +\\StruQ} & \thead{RAG +\\NLI Verif.} & \thead{\textbf{ProvGuard-}\\\textbf{RAG (Ours)}}\\
+\midrule
+Instruction override & 0.739 $\pm$ 0.027 & 0.178 $\pm$ 0.008 & 0.315 $\pm$ 0.013 & \textbf{0.093 $\pm$ 0.005}\\
+Indirect injection (HTML) & 0.612 $\pm$ 0.023 & 0.215 $\pm$ 0.010 & 0.267 $\pm$ 0.012 & \textbf{0.080 $\pm$ 0.005}\\
+Exfiltration prompt & 0.403 $\pm$ 0.016 & 0.120 $\pm$ 0.006 & 0.182 $\pm$ 0.009 & \textbf{0.047 $\pm$ 0.004}\\
+System-prompt leakage & 0.531 $\pm$ 0.020 & 0.153 $\pm$ 0.008 & 0.213 $\pm$ 0.009 & \textbf{0.069 $\pm$ 0.004}\\
+\bottomrule
+\end{tabularx}
+\end{table}
