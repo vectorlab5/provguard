@@ -30,5 +30,13 @@ provguard/models/
 data/
 experiments/values.tex
 
+# Paper / manuscript artifacts (source-only repo)
+brain/
+Definitions/
+PaperOutline.md
+MDPI_template*.zip
+experiments/table_*.tex
+figures/prompts/
+
 # OS
 .DS_Store
