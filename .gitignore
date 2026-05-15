@@ -9,6 +9,10 @@
 *.pdf
 *.synctex.gz
 *.toc
+*.tex
+*.bib
+*.cls
+*.sty
 
 # Python
 __pycache__/
@@ -16,10 +20,15 @@ __pycache__/
 *$py.class
 venv/
 .env
+env/
+build/
+dist/
+*.egg-info/
 
 # Models & Data
 provguard/models/
 data/
+experiments/values.tex
 
 # OS
 .DS_Store
